@@ -1,0 +1,6 @@
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+
+  jms:
+    pubSubDomain: true    #to send the message to topic instead of queue
