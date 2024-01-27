@@ -14,8 +14,8 @@ public class Sender {
     @Autowired
     private JmsTemplate jmsTemplate;
 
-    public void send(Product message){
-        LOGGER.info("sending message='{}'",message);  //convertAndSend converts the object to a JMS message before sending
+    public void send(Product message) {
+        LOGGER.info("sending message='{}'", message);  //convertAndSend converts the object to a JMS message before sending
         jmsTemplate.convertAndSend("temp", message);  //by default destination is queue
 
     }
